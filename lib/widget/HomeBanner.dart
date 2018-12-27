@@ -78,8 +78,8 @@ class _HomeBannerState extends State<HomeBanner> {
     _indicators.clear();
     for (int i = 0; i < widget.topList.length; i++) {
       _indicators.add(new SizedBox(
-        width: 5.0,
-        height: 5.0,
+        width: 10.0,
+        height: 10.0,
         child: new Container(
           color: i == _curIndicatorsIndex ? Colors.white : Colors.grey,
         ),
@@ -105,7 +105,7 @@ class _HomeBannerState extends State<HomeBanner> {
           child: new Center(
             child: new SizedBox(
               width: widget.topList.length * 16.0,
-              height: 5.0,
+              height: 10.0,
               child: new Row(
                 children: _indicators,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,

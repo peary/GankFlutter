@@ -52,7 +52,7 @@ class _ApplicationPageState extends State<ApplicationPage>
       theme: new ThemeData(primaryColor: GlobalConfig.colorPrimary),
       home: Scaffold(
         appBar: new AppBar(
-          title: new Text(title),
+          title: new Text(title, style: TextStyle(fontSize: 16),),
         ),
         drawer: new Drawer(
           child: new IndexDrawPage(

@@ -49,28 +49,6 @@ class _NewsListState extends State<HomePage> with HttpExt {
   @override
   Widget build(BuildContext context) {
     return new RefreshIndicator(
-      ///懒加载这种方式对缓存策略不友好，暂时放弃
-//      child: new FutureBuilder(
-//        //用于懒加载的FutureBuilder对象
-//        future: get(Api.TODAY_URL), //HTTP请求获取数据，将被AsyncSnapshot对象监视
-//        builder: (BuildContext context, AsyncSnapshot snapshot) {
-//          switch (snapshot.connectionState) {
-//            case ConnectionState.none: //get未执行时
-//            case ConnectionState.waiting: //get正在执行时
-//              return buildLoadingIndicator();
-//            default:
-//              if (snapshot.hasError) {
-//                //get执行完成但出现异常
-//                return buildExceptionIndicator("网络请求出错了！");
-//              } else {
-//                //get正常执行完成
-//                // 创建列表，列表数据来源于snapshot的返回值，而snapshot就是get(widget.newsType)执行完毕时的快照
-//                // get(widget.newsType)执行完毕时的快照即函数最后的返回值。
-//                return buildDailyListView(context, snapshot, listData);
-//              }
-//          }
-//        },
-//      ),
       child: buildDailyListView(context, snapshot, listData),
       onRefresh: _pullToRefresh,
     );
