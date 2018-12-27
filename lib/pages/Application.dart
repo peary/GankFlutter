@@ -4,7 +4,7 @@ import 'index/IndexDrawPage.dart';
 
 import 'home/HomePage.dart';
 import 'classify/ClassifyPage.dart';
-import 'mine/MinePage.dart';
+import 'my/myPage.dart';
 
 class ApplicationPage extends StatefulWidget {
   @override
@@ -29,7 +29,7 @@ class _ApplicationPageState extends State<ApplicationPage>
         backgroundColor: GlobalConfig.colorPrimary),
     new BottomNavigationBarItem(
         icon: Icon(Icons.person),
-        title: Text(GlobalConfig.mineTab),
+        title: Text(GlobalConfig.myTab),
         backgroundColor: GlobalConfig.colorPrimary),
   ];
 
@@ -64,7 +64,7 @@ class _ApplicationPageState extends State<ApplicationPage>
         ),
         body: new PageView(
           physics: NeverScrollableScrollPhysics(),
-          children: <Widget>[HomePage(), ClassifyPage(), MinePage()],
+          children: <Widget>[HomePage(), ClassifyPage(), MyPage()],
           controller: pageController,
           onPageChanged: onPageChanged,
         ),
@@ -94,7 +94,7 @@ class _ApplicationPageState extends State<ApplicationPage>
           title = GlobalConfig.classyTab;
           break;
         case 2:
-          title = GlobalConfig.mineTab;
+          title = GlobalConfig.myTab;
           break;
       }
     });

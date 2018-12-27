@@ -20,7 +20,7 @@ class GlobalConfig {
   ///导航
   static String homeTab = "首页";
   static String classyTab = "分类";
-  static String mineTab = "我的";
+  static String myTab = "我的";
 
   ///侧边栏
   static String email = "330093887@qq.com";
