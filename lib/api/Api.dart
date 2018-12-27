@@ -1,6 +1,7 @@
 class Api {
   static final String HOST = "http://gank.io/api";
-  static final String FEED_URL = "http://gank.io/api/data/";
+  // static final String FEED_URL = "http://gank.io/api/data/";
+  static final String FEED_URL = "https://blockshare.top/wp-json/wp/v2/posts?size=10&page=";
   static final String SEARCH_URL = "http://gank.io/api/search/query/";
   static final String TODAY_URL = "http://gank.io/api/today";
 
