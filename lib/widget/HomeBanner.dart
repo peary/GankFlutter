@@ -6,6 +6,9 @@ import 'package:GankFlutter/welfare/PhotoView.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
+import 'SlideView.dart';
+import 'SlideViewIndicator.dart';
+
 class HomeBanner extends StatefulWidget {
   final _homeBannerHeight;
 
@@ -78,8 +81,8 @@ class _HomeBannerState extends State<HomeBanner> {
     _indicators.clear();
     for (int i = 0; i < widget.topList.length; i++) {
       _indicators.add(new SizedBox(
-        width: 10.0,
-        height: 10.0,
+        width: 8.0,
+        height: 8.0,
         child: new Container(
           color: i == _curIndicatorsIndex ? Colors.white : Colors.grey,
         ),
@@ -105,7 +108,7 @@ class _HomeBannerState extends State<HomeBanner> {
           child: new Center(
             child: new SizedBox(
               width: widget.topList.length * 16.0,
-              height: 10.0,
+              height: 8.0,
               child: new Row(
                 children: _indicators,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,

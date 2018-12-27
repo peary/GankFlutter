@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:GankFlutter/common/GlobalConfig.dart';
 import 'package:GankFlutter/utils/PageRouteUtils.dart';
 import 'package:GankFlutter/pages/search/SearchPage.dart';
+import 'package:GankFlutter/pages/my/ChangeThemePage.dart';
 
 ///侧滑栏
 // ignore: must_be_immutable
@@ -22,6 +23,18 @@ class IndexDrawPage extends StatelessWidget {
           decoration: new BoxDecoration(
               image: new DecorationImage(
                   image: new AssetImage(background), fit: BoxFit.cover)),
+        ),
+        new ListTile(
+          title: new Text("色彩"),
+          trailing: new Icon(
+            Icons.color_lens,
+            color: Colors.red,
+          ),
+          onTap: () {
+            print("Theme Color");
+            Navigator.of(context).pop();
+            routePagerNavigator(context, new ChangeThemePage());
+          },
         ),
         new ListTile(
           title: new Text("福利"),
